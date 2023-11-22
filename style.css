@@ -1,0 +1,234 @@
+@charset "utf-8";
+
+@font-face {
+    
+    font-family:font2;
+    src: url(Magical\ Childhood.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    font-family:font2;
+    background:#d8cdcd;
+
+}
+
+h1,
+h2 {
+    font-weight: 800;
+    color: #000000;
+    font-family:font2;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+   background-color: #d8cdcd;
+}
+
+main {
+    display: block;
+    background: #d8cdcd;
+}
+
+.container {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20px;
+    animation: surgir 3s ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 10% cover 50%;
+    perspective: 900px;
+    font-family: font2;
+    font-size: xx-small;
+}
+
+section.modulo p {
+    margin-bottom: 40px;
+    text-align: justify;
+    font-size: 1.4em;
+}
+
+section.modulo h2 {
+    margin-bottom: 40px;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-align: center;
+}
+
+section.modulo.content {
+    padding: 40px 0;
+    background: rgb(216, 205, 205);
+}
+
+section.modulo.parallax {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+section.modulo.parallax h1 {
+    color: #d31212;
+    text-shadow: 5px 5px 5px #ffffffa4;
+    font-size: 4em;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 50;
+}
+
+section.modulo.parallax:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.233) 0, rgba(255, 255, 255, 0) 80%, rgb(0, 0, 0) 100%);
+}
+
+@keyframes surgir {
+    from {
+        opacity: 0;
+        translate: -100vw 0;
+
+    }
+
+    to {
+        opacity: 1;
+        translate: 0 0;
+
+    }
+
+}
+
+
+section.modulo.parallax-1 {
+    background-image: url("https://marciadeoliveira.com.br/media/k2/items/cache/2e2c1711fe12b24ae23d95c35bfd21c2_XL.jpg");
+}
+
+section.modulo.parallax-2 {
+    background-image: url("https://www.vermelho.org.br/wp-content/uploads/2022/11/Captura-de-Tela-2022-11-21-a%CC%80s-19.21.46.png");
+}
+
+section.modulo.parallax-3 {
+    background-image: url("https://static.todamateria.com.br/upload/or/ig/origem-do-dia-da-consciencia-negra-og.jpg");
+}
+
+
+footer{
+    text-align: center;
+    background-color:#d8cdcd;
+    background:#d8cdcd;
+    padding: 10px;
+    padding-bottom: 1px;
+}
+.carrossel{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: rotate360 30s infinite forwards linear ;
+}
+
+.imagem{
+    position: absolute;
+    width: 290px;
+    height: 187px;
+    top: 40px;
+    left: 10px;
+    right: 10px;
+    background-size: cover;
+    display: flex;
+}
+
+.imagem span{
+    margin: auto;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+@keyframes rotate360 {
+    from{
+        transform: rotateY(0deg);
+    }
+
+    to{
+        transform: rotateY(-360deg);
+    }
+}
+
+.imagem:nth-child(1){
+    background-image: url(https://www.institutoiab.org.br/wp-content/uploads/2013/11/NOVEMBRO-NEGRO1.jpg);
+    transform: rotateY(0deg) translateZ(430px);
+}
+.imagem:nth-child(2){
+    background-image: url(https://cmeusebio.ce.gov.br/wp-content/uploads/2019/11/consiencia-negra.jpg);
+    transform: rotateY(40deg) translateZ(430px);
+}
+.imagem:nth-child(3){
+    background-image: url(https://www.redebrasilatual.com.br/wp-content/uploads/2021/11/consciencia-negra.jpg);
+    transform: rotateY(80deg) translateZ(430px);
+}
+.imagem:nth-child(4){
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhDA4nm1H47ulNzfSFif-Qv5-RBG1omL2CVg&usqp=CAU);
+    transform: rotateY(120deg) translateZ(430px);
+}
+.imagem:nth-child(5){
+    background-image: url(https://www.pmdf.df.gov.br/images/Destaques/2015/Novembro/banner-consciencia-negra.jpg);
+    transform: rotateY(160deg) translateZ(430px);
+}
+.imagem:nth-child(6){
+    background-image: url(https://images02.brasildefato.com.br/2e1e46f972de926e37674157e3e05cbd.jpeg);
+    transform: rotateY(200deg) translateZ(430px);
+}
+.imagem:nth-child(7){
+    background-image: url(https://www.colegioweb.com.br/wp-content/uploads/2014/11/Dia-da-Consci%C3%AAncia-Negra.jpg);
+    transform: rotateY(240deg) translateZ(430px);
+}
+.imagem:nth-child(8){
+    background-image: url(https://cdn.brasildefato.com.br/media/b2cf3e129cf59eb1c8296fb7a0a761a1.jpg);
+    transform: rotateY(280deg) translateZ(430px);
+}
+.imagem:nth-child(9){
+    background-image: url(https://static.historiadomundo.com.br/2019/05/escravos.jpg);
+    transform: rotateY(320deg) translateZ(430px);
+}
+
+
+@media all and (max-width: 760px) {
+
+    section.modulo p {
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 1em;
+    }
+
+    section.modulo.parallax h1 {
+        font-size: 1.5em;
+    }
+
+    section.modulo.content {
+        width: 95%;
+        background-color: #d8cdcd;
+    }
+
+   
+
+    footer{
+        text-align: center;
+        background-color:#d8cdcd;
+    background:#d8cdcd;
+    padding: 10px;
+    }
+}
